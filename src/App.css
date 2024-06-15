@@ -36,3 +36,9 @@
     transform: rotate(360deg);
   }
 }
+
+span.reuse_component {
+  background: gray;
+  line-height: 2;
+  font-size: 20px;
+}
