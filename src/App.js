@@ -23,7 +23,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 /* import Add from './components/crud/add'; */
 import Enter_data from './components/crud/Enter_data';
-
+   
 
 class App extends React.Component{
    constructor(){
