@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReactJs without Installation :- we can also used CDN</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+<body>
+    <!-- ReactJs without Installation -->
+    <!-- 
+        1. React gernally used with NPM.
+        2. But we can also used CDN.
+        Ans :-  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+                <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+                <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+        3. Make example with React CDN.
+        Ans :-  <script type="text/babel">
+                    // Make a component
+                    function createComponent(){
+                        const bla = () => alert("Hello ReactJS");
+                        return <button onclick={bla}> Click me </button>;
+                    }
+                    // Start React Js code
+                    /* class Hello extends React.Component{
+                        render(){
+                            return <div> Hello React with Code </div>
+                        }
+                    } */
+                    // Class with component
+                    class Hello extends React.Component{
+                        render(){
+                            return <div> Hello React with Code <createComponent /></div> // <createComponent /> :- Component name
+                        }
+                    }
+                    // Connect the ReactJs with Html using the React DOM :-  src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"
+                    ReactDOM.render(<Hello />, document.getElementById("mydiv")); // <Hello /> :- class name
+
+                </script>
+        4. Interview Question.
+        Q :- Why we used the NPM with react?
+        Ans :- NPM is manage the NodeJs package. It's minified the project and create build of project. When we uploaded into the production level then it's fold in single file.
+        
+     -->
+     <div id="mydiv">
+        Hello React.....
+     </div>
+    <script type="text/babel">
+        // Make a component
+        function createComponent(){
+            const bla = () => alert("Hello ReactJS");
+            return <button onclick={bla}> Click me </button>;
+        }
+        // Start React Js code
+        /* class Hello extends React.Component{
+            render(){
+                return <div> Hello React with Code </div>
+            }
+        } */
+        // Class with component
+        class Hello extends React.Component{
+            render(){
+                return <div> Hello React with Code <createComponent /></div> // <createComponent /> :- Component name
+            }
+        }
+        // Connect the ReactJs with Html using the React DOM :-  src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"
+        ReactDOM.render(<Hello />, document.getElementById("mydiv")); // <Hello /> :- class name
+
+    </script>
+</body>
+</html>
